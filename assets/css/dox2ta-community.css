@@ -1,0 +1,161 @@
+@import url("https://cdn.fontcdn.ir/Font/Pinar/Pinar.css");
+
+/* Dota 2 themed banner styles - RTL + Pinar */
+.dox2ta-community {
+  direction: rtl;
+  font-family: "Pinar", system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+  color: #e4d7c5;
+}
+.dox2ta-stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 24px 24px;
+  background: linear-gradient(
+      135deg,
+      rgba(26, 26, 26, 0.55),
+      rgba(14, 14, 14, 0.35)
+    )
+    padding-box;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  backdrop-filter: blur(12px) saturate(130%);
+  -webkit-backdrop-filter: blur(12px) saturate(130%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(0, 0, 0, 0.3) inset;
+  width: 100%;
+  min-height: 140px;
+  text-align: center;
+}
+.dox2ta-logo {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 auto;
+  background: url("https://upload.wikimedia.org/wikipedia/en/2/23/Dota_2_logo.svg")
+    no-repeat center/contain;
+  opacity: 0.95;
+}
+.dox2ta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.dox2ta-title {
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: #ff965e;
+  text-shadow: 0 0 8px rgba(255, 80, 0, 0.6);
+}
+.dox2ta-subtitle {
+  margin: 0;
+  color: #e9dac7;
+  opacity: 0.95;
+}
+.dox2ta-desc {
+  margin: 0;
+  color: #e9dac7;
+}
+.dox2ta-checklist {
+  margin: 8px 0 6px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+.dox2ta-checklist li {
+  position: relative;
+  padding-inline-start: 24px;
+  text-align: start;
+  color: #e9dac7;
+}
+.dox2ta-checklist li::before {
+  content: "✓";
+  position: absolute;
+  inset-inline-start: 0;
+  color: #6de3a7;
+  font-weight: 700;
+}
+.dox2ta-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 1px solid #6b2d12;
+  border-radius: 8px;
+  color: #ffe7d6;
+  background: linear-gradient(180deg, #a33a17, #7a2b11);
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4),
+    inset 0 0 24px rgba(255, 120, 0, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+.dox2ta-btn-block {
+  display: inline-flex;
+  width: 100%;
+  max-width: 680px;
+}
+.dox2ta-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.5),
+    inset 0 0 34px rgba(255, 120, 0, 0.35);
+}
+.dox2ta-btn:active {
+  transform: translateY(1px) scale(0.99);
+}
+.dox2ta-btn .flare {
+  display: none;
+}
+.dox2ta-result {
+  margin-top: 8px;
+  font-size: 1.02rem;
+  min-height: 1.4em;
+}
+.dox2ta-result--success {
+  color: #b8f5c4;
+  background: rgba(34, 86, 46, 0.35);
+  border: 1px solid rgba(119, 212, 143, 0.45);
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+.dox2ta-result--error {
+  color: #ffd3d3;
+  background: rgba(120, 35, 35, 0.35);
+  border: 1px solid rgba(233, 103, 103, 0.45);
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+/* Simple subtle glow */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 30px rgba(255, 120, 0, 0.06) inset;
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(255, 120, 0, 0.12) inset;
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(255, 120, 0, 0.06) inset;
+  }
+}
+.dox2ta-stage {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Fullscreen confetti canvas */
+#dox2ta-confetti-global {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+}
