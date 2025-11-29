@@ -82,7 +82,7 @@ Table: `{prefix}dox2ta_members`
 
 ## License
 
-GPLv2 or later. See the plugin header.
+GPLv2
 
 ## Credits
 
